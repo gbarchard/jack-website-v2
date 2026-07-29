@@ -1,11 +1,15 @@
 import type { PropsWithChildren } from "react";
 import NavBar from "./components/NavBar";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home/Home";
 
 export default function App() {
   return (
     <Providers>
       <NavBar />
+      <Routes>
+        <Route index element={<Home />} />
+      </Routes>
     </Providers>
   );
 }
