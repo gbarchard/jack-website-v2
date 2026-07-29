@@ -1,3 +1,8 @@
 @import "tailwindcss";
 @import "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
+
+@theme {
+  --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-georgia: Georgia, serif;
+}

@@ -9,15 +9,23 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <Navbar className="dark:border-b dark:bg-black">
-      <NavbarBrand>
+      {/* @ts-expect-error component does recognize link props */}
+      <NavbarBrand as={Link} to="/" className="font-georgia">
         TESKE<span className="text-red-500">ART</span>
       </NavbarBrand>
       <NavbarCollapse>
-        <NavbarLink as={Link} to="work">
+        {/* @ts-expect-error component does recognize link props */}
+        <NavbarLink as={Link} to="work" className="font-georgia">
           Work
         </NavbarLink>
-        <NavbarLink>Comic</NavbarLink>
-        <NavbarLink>Contact</NavbarLink>
+        {/* @ts-expect-error component does recognize link props */}
+        <NavbarLink as={Link} to="comic" className="font-georgia">
+          Comic
+        </NavbarLink>
+        {/* @ts-expect-error component does recognize link props */}
+        <NavbarLink as={Link} to="?contact" className="font-georgia">
+          Contact
+        </NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );
