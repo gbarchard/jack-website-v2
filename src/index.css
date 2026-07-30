@@ -6,3 +6,7 @@
   --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-georgia: Georgia, serif;
 }
+
+button {
+  cursor: pointer;
+}
